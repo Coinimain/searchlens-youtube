@@ -1,37 +1,38 @@
-# SearchLens for YouTube — GitHub Pages site
+# SearchLens for YouTube
 
-This folder is ready to upload to a public GitHub repository.
+SearchLens adds advanced search controls to YouTube, making it easier to narrow down results and find the videos you are actually looking for.
 
-## Files
+## Features
 
-- `index.html` — homepage / website URL
-- `support.html` — support URL
-- `privacy.html` — privacy policy URL
-- `style.css` — shared site styling
-- `assets/searchlens-icon.png` — app icon used in the header, hero/footer, and browser tab icon
+- Custom date ranges
+- Strict keyword and title matching
+- Include or exclude specific channels
+- Minimum and maximum duration filters
+- Minimum and maximum view filters
+- Hide Shorts, playlists, mixes, live streams, and other unwanted result types
+- Sort currently loaded results by date, views, or duration
+- Search YouTube directly from the extension popup
 
-## Replace the app icon
+## How it works
 
-Replace:
+SearchLens runs on YouTube search result pages and adds a lightweight floating launcher. Open the SearchLens panel to refine the current results or start a new search with more precise controls.
 
-`assets/searchlens-icon.png`
+Some filters work by refining the results already loaded by YouTube, while custom date searches use YouTube search query operators.
 
-with your final SearchLens icon while keeping the same filename. A square PNG is recommended. The pages already reference this file, so no HTML edits are needed.
+## Support
 
-## Publish with GitHub Pages
+For help, usage guidance, and troubleshooting, visit the project support page:
 
-1. Create a public GitHub repository, for example `searchlens-youtube`.
-2. Upload all files in this folder to the repository root.
-3. Open **Settings → Pages**.
-4. Under **Build and deployment**, choose **Deploy from a branch**.
-5. Select the `main` branch and `/ (root)` folder, then save.
+[SearchLens Support](support.html)
 
-Your URLs will follow this pattern:
+## Privacy
 
-- Homepage: `https://YOUR-USERNAME.github.io/searchlens-youtube/`
-- Support: `https://YOUR-USERNAME.github.io/searchlens-youtube/support.html`
-- Privacy: `https://YOUR-USERNAME.github.io/searchlens-youtube/privacy.html`
+See the full privacy policy here:
 
-## Before publishing
+[Privacy Policy](privacy.html)
 
-Review the privacy policy and support text, then replace any wording or contact method you want to customize before using the URLs in the Chrome Web Store.
+## Disclaimer
+
+SearchLens is an independent browser extension and is not affiliated with, endorsed by, or sponsored by YouTube or Google.
+
+YouTube is a trademark of Google LLC.
