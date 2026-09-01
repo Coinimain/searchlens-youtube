@@ -3,22 +3,32 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Help and support for SearchLens for YouTube.">
+  <meta
+    name="description"
+    content="Help and support for SearchLens for YouTube, including search filters, custom dates, browser permissions, and troubleshooting."
+  >
   <meta name="theme-color" content="#0f0f17">
   <title>Support | SearchLens for YouTube</title>
+
   <link rel="icon" type="image/png" href="assets/searchlens-icon.png">
   <link rel="apple-touch-icon" href="assets/searchlens-icon.png">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <div class="ambient ambient-one" aria-hidden="true"></div>
   <div class="ambient ambient-two" aria-hidden="true"></div>
 
   <header class="site-header">
     <a class="brand" href="index.html" aria-label="SearchLens home">
-      <img src="assets/searchlens-icon.png" alt="SearchLens icon" class="brand-icon">
+      <img
+        src="assets/searchlens-icon.png"
+        alt="SearchLens icon"
+        class="brand-icon"
+      >
       <span>SearchLens</span>
     </a>
+
     <nav class="nav" aria-label="Main navigation">
       <a href="index.html">Home</a>
       <a class="active" href="support.html">Support</a>
@@ -27,119 +37,519 @@
   </header>
 
   <main class="shell page-main">
+
     <section class="page-hero">
       <p class="eyebrow">SUPPORT &amp; HELP</p>
       <h1>Using SearchLens</h1>
-      <p>Everything you need to start searching, refine results, and troubleshoot the extension.</p>
+      <p>
+        Everything you need to start searching, refine YouTube results,
+        manage browser access, and troubleshoot SearchLens.
+      </p>
     </section>
 
     <div class="docs-layout">
+
       <aside class="docs-nav" aria-label="Support topics">
         <a href="#getting-started">Getting started</a>
         <a href="#searching">Starting a search</a>
         <a href="#dates">Custom date ranges</a>
         <a href="#filters">Filters and sorting</a>
         <a href="#launcher">Floating launcher</a>
+        <a href="#permissions">Browser permissions</a>
         <a href="#troubleshooting">Troubleshooting</a>
         <a href="#limitations">Important notes</a>
       </aside>
 
       <article class="docs-content">
+
         <section id="getting-started" class="doc-section">
           <h2>Getting started</h2>
-          <p>After installing SearchLens, open YouTube and run a search. A small floating <strong>SearchLens</strong> launcher appears on search-result pages. Click it to open the full filter panel.</p>
-          <div class="tip"><strong>Tip:</strong> You can also click the extension icon in Chrome to start a new YouTube search directly from the popup.</div>
+
+          <p>
+            After installing SearchLens, open YouTube and run a search.
+            A small floating <strong>SearchLens</strong> launcher appears on
+            YouTube search-result pages. Click it whenever you want to open
+            the full filter panel.
+          </p>
+
+          <div class="tip">
+            <strong>Tip:</strong>
+            You can also click the SearchLens extension icon in your browser
+            to start a new YouTube search directly from the popup.
+          </div>
         </section>
+
 
         <section id="searching" class="doc-section">
           <h2>Starting a search</h2>
+
           <p>There are two simple ways to begin:</p>
+
           <ul>
-            <li>Type a search term in the SearchLens extension popup and submit it.</li>
-            <li>Search on YouTube normally, then open the floating SearchLens launcher to refine the current results.</li>
+            <li>
+              Type a search term in the SearchLens extension popup and submit it.
+            </li>
+
+            <li>
+              Search on YouTube normally, then use the floating SearchLens
+              launcher to refine the current results.
+            </li>
           </ul>
-          <p>The search-term field inside the full SearchLens panel can also be used to start a different search without closing the panel first.</p>
+
+          <p>
+            The search field inside the full SearchLens panel can also be used
+            to start another search without closing the panel first.
+          </p>
         </section>
+
 
         <section id="dates" class="doc-section">
           <h2>Custom date ranges</h2>
-          <p>Date fields accept flexible input, so you do not need to memorize a full date format.</p>
+
+          <p>
+            SearchLens accepts flexible date input, so you do not need to enter
+            a complete date every time.
+          </p>
+
           <div class="example-grid">
-            <div><code>2004</code><span>Whole year</span></div>
-            <div><code>2004-05</code><span>Whole month</span></div>
-            <div><code>2004-05-17</code><span>Exact date</span></div>
+            <div>
+              <code>2010</code>
+              <span>Whole year</span>
+            </div>
+
+            <div>
+              <code>2010-05</code>
+              <span>Whole month</span>
+            </div>
+
+            <div>
+              <code>2010-05-17</code>
+              <span>Exact date</span>
+            </div>
           </div>
-          <p>You can also use the built-in calendar. Click the year to open the year picker, jump through year ranges, choose a year, then select the month and day.</p>
-          <div class="note"><strong>Note:</strong> Custom date searches use date operators interpreted by YouTube search. SearchLens can build and refine the query, but it cannot force YouTube to return a video that YouTube itself does not include in the search results.</div>
+
+          <p>
+            You can also use the built-in calendar. Select the month or year
+            directly, use the year picker to jump across longer periods, and
+            then choose the exact day you want.
+          </p>
+
+          <div class="note">
+            <strong>Earliest available date:</strong>
+            SearchLens limits the calendar to <strong>April 23, 2005</strong>,
+            the date of the first video uploaded to YouTube. Dates before this
+            are unavailable, and future dates are also disabled.
+          </div>
+
+          <div class="note">
+            <strong>Note:</strong>
+            Custom date searches use date operators interpreted by YouTube
+            search. SearchLens can construct and refine the query, but it
+            cannot force YouTube to return a video that YouTube itself does
+            not include in the search results.
+          </div>
         </section>
+
 
         <section id="filters" class="doc-section">
           <h2>Filters and sorting</h2>
+
           <div class="mini-grid">
-            <div><strong>Strict relevance</strong><p>Require words, match an exact phrase in titles, or exclude unwanted terms.</p></div>
-            <div><strong>Channel filters</strong><p>Include or exclude channels based on visible channel names.</p></div>
-            <div><strong>Duration and views</strong><p>Set minimum and maximum values using the metadata visible on loaded results.</p></div>
-            <div><strong>Clean results</strong><p>Hide Shorts, shelves, playlists, mixes, channels, live streams, or watched items.</p></div>
+
+            <div>
+              <strong>Strict relevance</strong>
+              <p>
+                Require specific words, match an exact phrase in titles,
+                exclude unwanted terms, or apply stricter title matching.
+              </p>
+            </div>
+
+            <div>
+              <strong>Channel filters</strong>
+              <p>
+                Include or exclude channels using visible channel names,
+                handles, and channel information available in YouTube results.
+              </p>
+            </div>
+
+            <div>
+              <strong>Duration and views</strong>
+              <p>
+                Set minimum or maximum duration and view values using metadata
+                available on loaded video results.
+              </p>
+            </div>
+
+            <div>
+              <strong>Clean results</strong>
+              <p>
+                Hide Shorts, shelves, playlists, mixes, channel cards,
+                live streams, previously clicked videos, and other unwanted
+                result types.
+              </p>
+            </div>
+
           </div>
-          <p>Sorting applies to matching videos that are currently loaded on the page. As you scroll and YouTube loads more results, SearchLens reapplies the selected filters and sort.</p>
+
+          <p>
+            Sorting applies to matching videos that are currently loaded on
+            the page. As you continue scrolling and YouTube loads additional
+            results, SearchLens automatically applies your selected filters
+            to the newly loaded results.
+          </p>
+
+          <div class="tip">
+            <strong>Tip:</strong>
+            With very restrictive filters, YouTube's loading indicator may
+            appear more often while scrolling. This is normal: SearchLens may
+            filter out most of a result batch, causing YouTube to load
+            additional results sooner.
+          </div>
         </section>
+
 
         <section id="launcher" class="doc-section">
           <h2>The floating launcher</h2>
-          <p>The floating SearchLens control is designed to stay out of the way until you need it.</p>
+
+          <p>
+            The floating SearchLens launcher keeps advanced search controls
+            nearby without permanently covering your YouTube results.
+          </p>
+
           <ul>
-            <li>Click <strong>SearchLens</strong> to open or close the panel.</li>
-            <li>Use the drag handle to move the launcher.</li>
-            <li>Use the close control to hide the launcher.</li>
-            <li>Open the extension popup and choose the filters option to restore it.</li>
+            <li>
+              Click <strong>SearchLens</strong> to open or close the full panel.
+            </li>
+
+            <li>
+              Drag the launcher to reposition it on the page.
+            </li>
+
+            <li>
+              Use the close control to dismiss it for the current search.
+            </li>
+
+            <li>
+              Use the extension popup to control whether the floating launcher
+              should normally appear on YouTube search pages.
+            </li>
           </ul>
+
+          <p>
+            SearchLens also includes display settings for choosing whether the
+            full panel should open automatically after searches started from
+            the extension popup or on every YouTube search.
+          </p>
         </section>
+
+
+        <section id="permissions" class="doc-section">
+          <h2>Browser permissions</h2>
+
+          <p>
+            SearchLens needs permission to access YouTube pages because its
+            core features run directly on YouTube search results. This allows
+            SearchLens to display its launcher and filter the result
+            information already visible in the page.
+          </p>
+
+          <h3>Firefox</h3>
+
+          <p>
+            On current versions of Firefox, YouTube access is requested as
+            part of the normal extension installation process. Allowing this
+            access lets SearchLens appear automatically when you search
+            YouTube.
+          </p>
+
+          <p>
+            If YouTube access is later removed or unavailable, opening
+            SearchLens will provide a way to restore the required permission.
+          </p>
+
+          <p>You can also restore access manually:</p>
+
+          <ol>
+            <li>
+              Open <strong>youtube.com</strong>.
+            </li>
+
+            <li>
+              Open Firefox's Extensions menu.
+            </li>
+
+            <li>
+              Find <strong>SearchLens for YouTube</strong>.
+            </li>
+
+            <li>
+              Under <strong>Extension Can Read and Change Data</strong>,
+              choose
+              <strong>Always Allow on www.youtube.com</strong>.
+            </li>
+
+            <li>
+              Reload the YouTube page if necessary.
+            </li>
+          </ol>
+
+
+          <h3>Chrome and Edge</h3>
+
+          <p>
+            Chrome and Microsoft Edge normally grant SearchLens the YouTube
+            access declared by the extension during installation.
+          </p>
+
+          <p>
+            If site access has been manually restricted, open your browser's
+            extension settings and make sure SearchLens is allowed to run on
+            YouTube.
+          </p>
+
+          <div class="note">
+            <strong>Privacy:</strong>
+            YouTube result processing is performed locally in your browser.
+            SearchLens does not need access to your YouTube or Google account.
+          </div>
+        </section>
+
 
         <section id="troubleshooting" class="doc-section">
           <h2>Troubleshooting</h2>
-          <h3>The launcher does not appear</h3>
+
+
+          <h3>The floating launcher does not appear</h3>
+
           <ol>
-            <li>Make sure you are on a YouTube search-results page.</li>
-            <li>Refresh the YouTube tab once after installing or updating the extension.</li>
-            <li>Confirm SearchLens is enabled at <code>chrome://extensions/</code>.</li>
-            <li>Open the SearchLens toolbar popup and try opening the filters from there.</li>
+            <li>
+              Make sure you are on a YouTube search-results page.
+            </li>
+
+            <li>
+              Confirm that SearchLens has permission to run on
+              <strong>youtube.com</strong>.
+            </li>
+
+            <li>
+              If you are using Firefox, check that
+              <strong>Always Allow on www.youtube.com</strong> is enabled for
+              SearchLens.
+            </li>
+
+            <li>
+              Open the SearchLens extension popup and confirm that
+              <strong>Show floating SearchLens button</strong> is enabled.
+            </li>
+
+            <li>
+              Refresh the YouTube tab once after installing or updating
+              SearchLens.
+            </li>
           </ol>
 
+
+          <h3>The launcher appeared before but is now hidden</h3>
+
+          <p>
+            If you dismissed the launcher using its close control, it may
+            remain hidden for the current search. Start another search,
+            refresh the results page, or open SearchLens from the browser
+            toolbar.
+          </p>
+
+
+          <h3>Why does the loading icon appear longer with a specific channel filter?</h3>
+
+          <p>
+            This is expected behavior and does not usually mean SearchLens is
+            stuck or malfunctioning.
+          </p>
+
+          <p>
+            SearchLens filters the results that YouTube provides. For example,
+            imagine that you perform a broad search and then set
+            <strong>Only channel containing</strong> to
+            <strong>How-To Geek</strong>.
+          </p>
+
+          <p>
+            YouTube may initially return a batch containing videos from many
+            different channels. SearchLens checks that batch and immediately
+            removes the results that do not match the selected channel.
+          </p>
+
+          <p>
+            If only a few videos in that batch are from How-To Geek, you reach
+            the bottom of the remaining visible results much sooner. YouTube
+            then needs to fetch another batch of search results.
+          </p>
+
+          <p>
+            If the next batch also contains mostly unrelated channels,
+            SearchLens filters those results out as well. YouTube may therefore
+            need to load several batches before enough additional matching
+            videos become available.
+          </p>
+
+          <div class="note">
+            <strong>This is not a loading glitch:</strong>
+            the spinning YouTube loading indicator means YouTube is fetching
+            additional search results. SearchLens is filtering those results
+            locally as they arrive and keeping only the videos that match your
+            selected filters.
+          </div>
+
+          <p>
+            The effect is most noticeable with very specific channel, keyword,
+            duration, or view filters. The narrower the filter, the more
+            result batches YouTube may need to load before it finds additional
+            matches.
+          </p>
+
+
+          <h3>Why do more videos appear as I keep scrolling?</h3>
+
+          <p>
+            YouTube uses infinite scrolling. It does not send every possible
+            search result to your browser at once.
+          </p>
+
+          <p>
+            SearchLens works with the results YouTube has currently loaded.
+            As YouTube provides more results, SearchLens checks the new batch
+            and automatically applies your active filters again.
+          </p>
+
+
+          <h3>A channel filter still shows unrelated results briefly</h3>
+
+          <p>
+            SearchLens filters newly loaded YouTube results as they enter the
+            page. Current versions are designed to hide non-matching results
+            quickly so they do not remain mixed into the filtered results.
+          </p>
+
+          <p>
+            If unrelated videos consistently remain visible after loading has
+            finished, report the search term and filter used so the particular
+            YouTube result type can be investigated.
+          </p>
+
+
           <h3>A filter does not seem to affect every result</h3>
-          <p>Some filters depend on metadata that YouTube exposes in the page, such as visible duration, view count, channel name, or watch progress. SearchLens only filters information available in the loaded result card.</p>
+
+          <p>
+            Some SearchLens filters depend on metadata YouTube exposes in each
+            loaded result card, such as channel name, duration, view count,
+            title, or video link.
+          </p>
+
+          <p>
+            SearchLens can only filter information that is available in the
+            loaded YouTube page.
+          </p>
+
 
           <h3>The date search is broader than expected</h3>
-          <p>SearchLens builds the date query, but the final set and ordering of results still come from YouTube search.</p>
+
+          <p>
+            SearchLens builds the requested date query, but the final selection
+            and ordering of videos still comes from YouTube's own search
+            system.
+          </p>
+
+
+          <h3>SearchLens stopped working after a YouTube change</h3>
+
+          <p>
+            YouTube regularly changes its page structure and search interface.
+            Refresh the page and make sure you are running the latest version
+            of SearchLens.
+          </p>
+
+          <p>
+            If the problem continues, report it with a screenshot or short
+            screen recording and the steps needed to reproduce it.
+          </p>
+
         </section>
+
 
         <section id="limitations" class="doc-section">
           <h2>Important notes</h2>
-          <p>SearchLens is an independent browser extension and is not affiliated with or endorsed by YouTube or Google.</p>
-          <p>YouTube may change its search interface or page structure over time. If a feature stops working after a YouTube update, refresh the page and check for an extension update.</p>
+
+          <p>
+            SearchLens is an independent browser extension and is not
+            affiliated with, endorsed by, or sponsored by YouTube or Google.
+          </p>
+
+          <p>
+            SearchLens enhances the results YouTube provides. It does not
+            replace YouTube's search engine and cannot retrieve videos that
+            YouTube does not return.
+          </p>
+
+          <p>
+            YouTube may change its search interface, result cards, or page
+            structure over time. SearchLens may occasionally require an update
+            to remain compatible with those changes.
+          </p>
         </section>
+
 
         <section class="support-card">
           <div>
             <p class="eyebrow">STILL STUCK?</p>
+
             <h2>Report the issue with useful details.</h2>
-            <p>Include the feature involved, what you expected, what happened instead, and a screenshot when possible. Use the contact or support method shown on the Chrome Web Store listing.</p>
+
+            <p>
+              Include the browser you are using, the SearchLens feature
+              involved, what you expected to happen, what happened instead,
+              and a screenshot or short screen recording when possible.
+            </p>
           </div>
-          <a class="button secondary" href="https://ko-fi.com/P5P31T3SZI" target="_blank" rel="noopener noreferrer">Support on Ko-fi</a>
+
+          <a
+            class="button secondary"
+            href="https://ko-fi.com/P5P31T3SZI"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Support on Ko-fi
+          </a>
         </section>
+
       </article>
     </div>
   </main>
 
+
   <footer class="site-footer shell">
+
     <div class="footer-brand">
-      <img src="assets/searchlens-icon.png" alt="" class="footer-icon">
+      <img
+        src="assets/searchlens-icon.png"
+        alt=""
+        class="footer-icon"
+      >
       <span>SearchLens for YouTube</span>
     </div>
+
     <div class="footer-links">
       <a href="index.html">Home</a>
       <a href="privacy.html">Privacy</a>
-      <a href="https://ko-fi.com/P5P31T3SZI" target="_blank" rel="noopener noreferrer">Ko-fi</a>
+
+      <a
+        href="https://ko-fi.com/P5P31T3SZI"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Ko-fi
+      </a>
     </div>
+
   </footer>
 </body>
 </html>
