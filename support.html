@@ -202,7 +202,7 @@
             <strong>Tip:</strong>
             With very restrictive filters, YouTube's loading indicator may
             appear more often while scrolling. This is normal: SearchLens may
-            filter out most of a result batch, causing YouTube to load
+            filter out most of one result batch, causing YouTube to load
             additional results sooner.
           </div>
         </section>
@@ -249,25 +249,36 @@
           <p>
             SearchLens needs permission to access YouTube pages because its
             core features run directly on YouTube search results. This allows
-            SearchLens to display its launcher and filter the result
-            information already visible in the page.
+            SearchLens to display its launcher and read the visible result
+            information needed for filtering and sorting.
           </p>
+
 
           <h3>Firefox</h3>
 
           <p>
-            On current versions of Firefox, YouTube access is requested as
-            part of the normal extension installation process. Allowing this
-            access lets SearchLens appear automatically when you search
-            YouTube.
+            When SearchLens is installed from Firefox Add-ons, Firefox asks
+            for permission to access data on <strong>www.youtube.com</strong>
+            as part of the normal installation process.
           </p>
 
           <p>
-            If YouTube access is later removed or unavailable, opening
-            SearchLens will provide a way to restore the required permission.
+            Choose <strong>Add</strong> in Firefox's permission prompt to grant
+            this access. Once granted, SearchLens can run automatically on
+            YouTube search-result pages and the floating launcher can appear
+            without you needing to click the extension each time.
           </p>
 
-          <p>You can also restore access manually:</p>
+          <div class="tip">
+            <strong>Tip:</strong>
+            You normally only need to approve YouTube access once when
+            installing SearchLens.
+          </div>
+
+          <p>
+            If YouTube access is later removed or restricted, SearchLens may
+            no longer appear automatically. You can restore access manually:
+          </p>
 
           <ol>
             <li>
@@ -332,9 +343,10 @@
             </li>
 
             <li>
-              If you are using Firefox, check that
-              <strong>Always Allow on www.youtube.com</strong> is enabled for
-              SearchLens.
+              If you are using Firefox, open the Extensions menu and confirm
+              that
+              <strong>Always Allow on www.youtube.com</strong>
+              is selected for SearchLens.
             </li>
 
             <li>
@@ -347,6 +359,27 @@
               SearchLens.
             </li>
           </ol>
+
+
+          <h3>Firefox only shows SearchLens after I click the extension</h3>
+
+          <p>
+            This usually means Firefox has SearchLens set to
+            <strong>Only When Clicked</strong> instead of allowing it to run
+            automatically on YouTube.
+          </p>
+
+          <p>
+            Open YouTube, open Firefox's Extensions menu, find
+            <strong>SearchLens for YouTube</strong>, and select
+            <strong>Always Allow on www.youtube.com</strong> under
+            <strong>Extension Can Read and Change Data</strong>.
+          </p>
+
+          <p>
+            Once this permission is enabled, the floating launcher should
+            appear automatically on YouTube search-result pages.
+          </p>
 
 
           <h3>The launcher appeared before but is now hidden</h3>
@@ -422,6 +455,27 @@
           </p>
 
 
+          <h3>Do restrictive filters make SearchLens slower?</h3>
+
+          <p>
+            Usually, the delay you see is not SearchLens taking a long time to
+            process the page. SearchLens filters the loaded result cards locally
+            and quickly.
+          </p>
+
+          <p>
+            The wait usually comes from YouTube needing to fetch more search
+            results because many of the results it already supplied did not
+            match your selected filters.
+          </p>
+
+          <p>
+            For example, if only a small percentage of YouTube's returned
+            results match one specific channel, several YouTube result batches
+            may be needed before another matching video appears.
+          </p>
+
+
           <h3>A channel filter still shows unrelated results briefly</h3>
 
           <p>
@@ -488,6 +542,12 @@
             SearchLens enhances the results YouTube provides. It does not
             replace YouTube's search engine and cannot retrieve videos that
             YouTube does not return.
+          </p>
+
+          <p>
+            SearchLens filters the results that are currently available in the
+            page. YouTube controls which results are returned, their initial
+            order, and when additional result batches are loaded.
           </p>
 
           <p>
