@@ -16,6 +16,64 @@
   <link rel="icon" type="image/png" href="assets/searchlens-icon.png">
   <link rel="apple-touch-icon" href="assets/searchlens-icon.png">
   <link rel="stylesheet" href="style.css">
+<style>
+  /* SearchLens third-party assessment card */
+  .security-section { margin-top: 1.5rem; }
+  .security-card {
+    display: grid;
+    grid-template-columns: minmax(150px, 190px) minmax(0, 1fr) auto;
+    align-items: center;
+    gap: clamp(1.25rem, 3vw, 2.5rem);
+    padding: clamp(1.4rem, 3vw, 2.2rem);
+    border: 1px solid rgba(56, 200, 133, .28);
+    border-radius: 22px;
+    background: linear-gradient(110deg, rgba(24, 58, 50, .6), rgba(17, 19, 32, .94) 55%, rgba(14, 16, 27, .98));
+    box-shadow: 0 16px 45px rgba(0, 0, 0, .12);
+  }
+  .security-score {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .4rem;
+    min-height: 160px;
+    padding: 1rem;
+    border: 1px solid rgba(65, 215, 144, .3);
+    border-radius: 18px;
+    background: rgba(16, 42, 35, .62);
+    color: #e7fff1;
+    text-align: center;
+  }
+  .security-score-number { color: #5ae0a2; font-size: clamp(2.4rem, 4vw, 3.4rem); font-weight: 800; line-height: 1; letter-spacing: -.05em; }
+  .security-score-number span { font-size: .34em; font-weight: 600; letter-spacing: 0; }
+  .security-score-label { color: #bcebd2; font-size: .8rem; }
+  .security-copy .eyebrow { color: #6de7ae; margin-bottom: .45rem; }
+  .security-copy h2 { margin: 0 0 .6rem; font-size: clamp(1.3rem, 2vw, 1.75rem); line-height: 1.25; }
+  .security-copy > p:not(.eyebrow) { margin: 0; color: #bec4d0; line-height: 1.6; }
+  .security-highlights { display: flex; flex-wrap: wrap; gap: .5rem; margin: .95rem 0; }
+  .security-highlights span {
+    display: inline-flex;
+    padding: .32rem .65rem;
+    border: 1px solid rgba(98, 228, 160, .21);
+    border-radius: 999px;
+    background: rgba(63, 150, 110, .12);
+    color: #cef4de;
+    font-size: .78rem;
+    font-weight: 600;
+  }
+  .security-copy .security-note { font-size: .77rem; color: #9aa4ae !important; }
+  .security-button { text-align: center; white-space: nowrap; }
+  @media (max-width: 980px) {
+    .security-card { grid-template-columns: 155px minmax(0, 1fr); }
+    .security-button { grid-column: 2; justify-self: start; }
+  }
+  @media (max-width: 600px) {
+    .security-card { grid-template-columns: 1fr; gap: 1.2rem; }
+    .security-score { min-height: auto; padding: 1.3rem; }
+    .security-button { grid-column: 1; justify-self: stretch; }
+  }
+</style>
+
 </head>
 
 <body>
@@ -230,6 +288,46 @@
       </div>
 
     </section>
+
+
+
+<!-- THIRD-PARTY SECURITY ASSESSMENT -->
+<section class="security-section shell" aria-labelledby="security-heading">
+  <div class="security-card">
+    <div class="security-score" aria-label="CRXPlorer security score: 93 out of 100">
+      <span class="security-score-number">93<span>/100</span></span>
+      <span class="security-score-label">CRXPlorer security score</span>
+    </div>
+
+    <div class="security-copy">
+      <p class="eyebrow">THIRD-PARTY AUTOMATED ASSESSMENT</p>
+      <h2 id="security-heading">Strong marks for minimal permissions.</h2>
+      <p>
+        CRXPlorer rated SearchLens for YouTube 93/100 in its automated
+        security assessment, highlighting its minimal permissions and
+        giving top marks for content security policy and external access.
+      </p>
+      <div class="security-highlights" aria-label="Assessment category scores">
+        <span>Permissions: 99/100</span>
+        <span>CSP: 100/100</span>
+        <span>External access: 100/100</span>
+      </div>
+      <p class="security-note">
+        Scanned September 28, 2026 (version 1.2.27). This automated score
+        is not a formal security audit or guarantee.
+      </p>
+    </div>
+
+    <a
+      class="button secondary security-button"
+      href="https://crxplorer.com/extension/ndphfebcjimfndlaiedcaaockinmgapa/searchlens-for-youtube"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      View security assessment
+    </a>
+  </div>
+</section>
 
 
 
